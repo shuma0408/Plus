@@ -58,9 +58,9 @@ export default function History() {
       <div className="max-w-6xl mx-auto px-4 py-8 md:py-12">
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center">
-              <HistoryIcon className="w-5 h-5 text-white" />
-            </div>
+              <div className="w-10 h-10 bg-sky-600 rounded-xl flex items-center justify-center">
+                <HistoryIcon className="w-5 h-5 text-white" />
+              </div>
             <div>
               <h1 className="text-3xl font-bold text-slate-900">履歴</h1>
               <p className="text-slate-600">過去に変換した質問を確認できます</p>
@@ -81,7 +81,7 @@ export default function History() {
 
         {isLoading ? (
           <div className="flex items-center justify-center py-20">
-            <div className="w-8 h-8 border-4 border-purple-600 border-t-transparent rounded-full animate-spin" />
+            <div className="w-8 h-8 border-4 border-sky-600 border-t-transparent rounded-full animate-spin" />
           </div>
         ) : filteredHistory.length === 0 ? (
           <Card className="shadow-lg border-none bg-white/80 backdrop-blur-sm">
@@ -107,12 +107,12 @@ export default function History() {
                           {format(new Date(item.created_date), "yyyy年MM月dd日 HH:mm", { locale: ja })}
                         </span>
                         {item.persona && (
-                          <Badge variant="secondary" className="bg-purple-100 text-purple-700">
+                          <Badge variant="secondary" className="bg-sky-100 text-sky-700">
                             {item.persona}
                           </Badge>
                         )}
                         {item.method && (
-                          <Badge variant="secondary" className="bg-indigo-100 text-indigo-700">
+                          <Badge variant="secondary" className="bg-blue-100 text-blue-700">
                             {item.method}
                           </Badge>
                         )}
